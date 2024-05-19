@@ -74,6 +74,8 @@ class _HomePageState extends State<HomePage> {
                 return ListTile(
                   textColor: Colors.black,
                   title: Text(noteText),
+                  trailing: IconButton(
+                      onPressed: () {}, icon: const Icon(Icons.delete)),
                 );
               },
             );

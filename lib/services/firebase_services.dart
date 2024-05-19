@@ -24,6 +24,15 @@ class FirebaseStoreSerivce {
   }
 
 // update note
+  Future<void> updateNote(String docID, String newNote) {
+    return notes.doc(docID).update({
+      'note': newNote,
+      'timestamp': Timestamp.now(),
+    });
+  }
 
 // delete note
+  Future<void> deleteNote(String docID) {
+    return notes.doc(docID).delete();
+  }
 }
